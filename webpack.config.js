@@ -4,9 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  // Webpack configuration goes here
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.[hash].js'
   },
@@ -14,12 +13,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
-        test: /\.css$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.s?css$/,
         use: [
           {
             loader: 'style-loader'
@@ -35,12 +39,14 @@ module.exports = {
           }
         ]
       }
-    ],
+    ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.jsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      favicon: 'public/favicon.ico'
     })
   ],
   devServer: {
