@@ -38,6 +38,28 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.less$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader', 
+        }, {
+          loader: 'less-loader', 
+          options: {
+            lessOptions: { 
+              modifyVars: {
+                'primary-color': '#1DA57A',
+                'background-color-light': '#1DA57A',
+                'layout-header-background': '#51A33E',
+                'layout-header-color': '#FFFFFF',
+              },
+              javascriptEnabled: true,
+            }
+          }
+         }
+        ]
       }
     ]
   },
