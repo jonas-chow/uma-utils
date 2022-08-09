@@ -1,0 +1,8 @@
+{
+  "name": "uma-utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jonas-chow/uma-utils.git",
+  "author": "Jonas Chow <jonaschow99@gmail.com>",
+  "license": "MIT"
+}
