@@ -6,13 +6,14 @@
   "author": "Jonas Chow <jonaschow99@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "webpack --mode production",
-    "serve": "webpack serve",
-    "scss": "typed-scss-modules src"
+    "scss": "typed-scss-modules src",
+    "start": "node server.js"
   },
   "dependencies": {
     "antd": "^4.22.4",
+    "express": "^4.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"
