@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Col, Layout, Row } from "antd";
+import { useNavigate } from "react-router-dom";
+import { Col, Layout, Row, Button } from "antd";
 
 const { Header, Content } =  Layout;
 
@@ -10,27 +10,30 @@ type Props = {
 
 const linkStyle = {
   color: "white",
+  width: "100%"
 };
 
 const PageTemplate = ({ children }: Props) => {
+  const nav = useNavigate();
+  
   return (
     <Layout>
       <Header>
         <Row>
           <Col span={6}>
-            <Link to="/" style={linkStyle}>
+            <Button ghost style={linkStyle} onClick={() => nav("/")}>
               Home
-            </Link>
+            </Button>
           </Col>
           <Col span={6}>
-            <Link to="/node-quality" style={linkStyle}>
+            <Button ghost style={linkStyle} onClick={() => nav("/node-quality")}>
               Node Quality
-            </Link>
+            </Button>
           </Col>
           <Col span={6}>
-            <Link to="/stamina" style={linkStyle}>
+            <Button ghost style={linkStyle} onClick={() => nav("/stamina")}>
               Stamina
-            </Link>
+            </Button>
           </Col>
         </Row>
       </Header>
