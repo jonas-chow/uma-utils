@@ -2,6 +2,8 @@ import { Row, Col, Typography } from "antd";
 import React from "react";
 import { Song } from "../types";
 import CostBar from "./CostBar";
+import songEffectIcon from "./images/songEffect.png";
+import songLiveEffectIcon from "./images/songLiveEffect.png";
 
 type Props = {
   song: Song,
@@ -23,11 +25,11 @@ const SongPanel = ({ song }: Props) => {
           <Text type="secondary">{song.englishName}</Text>
         </div>
         <div>
-          <img src="/images/songEffect.png" width={32} height={32} />
+          <img src={songEffectIcon} width={32} height={32} />
           <Text style={{paddingLeft: 5}}>{song.effect}</Text>
         </div>
         <div>
-          <img src="/images/songLiveEffect.png" width={32} height={32} />
+          <img src={songLiveEffectIcon} width={32} height={32} />
           <Text style={{paddingLeft: 5}}>{song.liveEffect}</Text>
         </div>
         <div>

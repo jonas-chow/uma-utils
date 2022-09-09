@@ -60,7 +60,11 @@ module.exports = {
           }
          }
         ]
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        type: 'asset/resource',
+      },
     ]
   },
   resolve: {

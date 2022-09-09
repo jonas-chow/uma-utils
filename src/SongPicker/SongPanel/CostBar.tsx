@@ -1,6 +1,11 @@
 import { Space } from "antd";
 import React from "react";
 import { SongCost } from "../types";
+import danceIcon from "./images/dance.png";
+import passionIcon from "./images/passion.png";
+import vocalIcon from "./images/vocal.png";
+import visualIcon from "./images/visual.png";
+import mentalIcon from "./images/mental.png";
 
 type Props = {
   cost: SongCost,
@@ -11,23 +16,23 @@ const CostBar = ({ cost }: Props) => {
     <Space size="large">
       <div>
         {cost.da}
-        <img src="/images/currency/dance.png" />
+        <img src={danceIcon} />
       </div>
       <div>
         {cost.pa}
-        <img src="/images/currency/passion.png" />
+        <img src={passionIcon} />
       </div>
       <div>
         {cost.vo}
-        <img src="/images/currency/vocal.png" />
+        <img src={vocalIcon} />
       </div>
       <div>
         {cost.vi}
-        <img src="/images/currency/visual.png" />
+        <img src={visualIcon} />
       </div>
       <div>
         {cost.me}
-        <img src="/images/currency/mental.png" />
+        <img src={mentalIcon} />
       </div>
     </Space>
   );

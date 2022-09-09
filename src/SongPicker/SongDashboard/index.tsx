@@ -37,7 +37,7 @@ const SongDashboard = ({ chosen, phase, previousPhaseCount, nextPhase, reset }: 
           okButtonProps={{danger: true}}
           disabled={isLastPhase}
         >
-          <Button danger onClick={reset}>
+          <Button danger onClick={() => isLastPhase && reset()}>
             Reset
           </Button>
         </Popconfirm>
