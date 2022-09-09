@@ -3,7 +3,7 @@ import React from "react";
 const Stamina = () => {
   return (
     <>
-    Stamina
+    wip
     </>
   );
 };

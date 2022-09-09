@@ -21,8 +21,8 @@ const PageTemplate = ({ children }: Props) => {
       <Header>
         <Row>
           <Col span={6}>
-            <Button ghost style={linkStyle} onClick={() => nav("/")}>
-              Home
+            <Button ghost style={linkStyle} onClick={() => nav("/song-picker")}>
+              Song Picker
             </Button>
           </Col>
           <Col span={6}>
@@ -37,7 +37,7 @@ const PageTemplate = ({ children }: Props) => {
           </Col>
         </Row>
       </Header>
-      <Content style={{ height: "100vh" }}>
+      <Content style={{ height: "100vh", padding: 10}}>
         {children}
       </Content>
     </Layout>
