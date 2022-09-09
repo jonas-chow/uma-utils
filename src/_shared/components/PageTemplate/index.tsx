@@ -17,8 +17,8 @@ const PageTemplate = ({ children }: Props) => {
   const nav = useNavigate();
   
   return (
-    <Layout>
-      <Header>
+    <Layout style={{ overflowX: "scroll" }}>
+      <Header style={{ minWidth: 720 }}>
         <Row>
           <Col span={6}>
             <Button ghost style={linkStyle} onClick={() => nav("/song-picker")}>
@@ -37,7 +37,7 @@ const PageTemplate = ({ children }: Props) => {
           </Col>
         </Row>
       </Header>
-      <Content style={{ height: "100vh", padding: 10}}>
+      <Content style={{ height: "100vh", padding: 10 }}>
         {children}
       </Content>
     </Layout>

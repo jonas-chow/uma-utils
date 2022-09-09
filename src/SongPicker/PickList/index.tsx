@@ -17,7 +17,7 @@ const PickList = ({ songs, selectSong }: Props) => {
       <List
         dataSource={songs}
         renderItem={item => (
-          <Button block onClick={() => selectSong(item)} style={{height: 200, padding: 0}}>
+          <Button block onClick={() => selectSong(item)} style={{height: 200, padding: 0, minWidth: 700}}>
             <SongPanel song={item} />
           </Button>
         )}
